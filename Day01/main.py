@@ -1,9 +1,8 @@
 #You can find the puzzle here: https://adventofcode.com/2020/day/1
 
-import math
 import sys
 
-#The file containing every masses
+#The file containing every numbers
 filename = sys.argv[-1]
 target = 2020
 

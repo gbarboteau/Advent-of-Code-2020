@@ -33,11 +33,11 @@ def DoesContainShiny(bag, myRegulations):
 
 #Getting the bags regulations from a txt file
 def GetRegulations():
-    listAnwers = []
-    hashedAnwers = {}
+    listRegulations = []
+    hashedRegulations = {}
     with open(filename) as f:
-        listAnwers = f.read().splitlines()
-    for c in listAnwers:
+        listRegulations = f.read().splitlines()
+    for c in listRegulations:
         thisBag = {}
         colors = " ".join(c.split()[4:]).replace(".", "").split(",")
         hashedColors = []
@@ -47,8 +47,8 @@ def GetRegulations():
                 for i in range (0, int(hashD[0])):
                     hashedColors.append(" ".join(d.split()[1:3]))
         thisBag[" ".join(c.split()[:2])] = hashedColors
-        hashedAnwers.update(thisBag)
-    return hashedAnwers
+        hashedRegulations.update(thisBag)
+    return hashedRegulations
 
 
 print(CountShinyBags())
